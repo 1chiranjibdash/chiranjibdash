@@ -1,0 +1,35 @@
+{
+  "name": "chiranib-dash-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio showcasing 4+ years of Java backend development expertise in AWS, microservices, event-driven architectures, MySQL, Datadog monitoring, and TypeScript library development.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": [
+    "portfolio",
+    "java",
+    "backend",
+    "developer",
+    "freelancing",
+    "AWS",
+    "MySQL",
+    "Datadog",
+    "microservices",
+    "event-driven",
+    "cloud-architect",
+    "spring-boot",
+    "TypeScript"
+  ],
+  "author": "Chiranib Dash",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/portfolio"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}

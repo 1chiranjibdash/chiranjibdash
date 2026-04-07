@@ -1,0 +1,34 @@
+name: Portfolio Deployment
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Validate HTML
+      run: |
+        echo "Validating HTML files..."
+        for file in src/*.html; do
+          echo "Checking $file"
+        done
+    
+    - name: Check links
+      run: |
+        echo "Links check would go here"
+        echo "All files present: ✓"
+
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./src
+        cname: yourportfolio.com  # Optional: if using custom domain

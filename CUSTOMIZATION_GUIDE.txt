@@ -1,0 +1,406 @@
+/* 🎨 PORTFOLIO COLOR & CUSTOMIZATION GUIDE */
+
+/* ═══════════════════════════════════════════════════════════════
+   This file documents all CSS variables used in the portfolio.
+   Change these values to customize your site's appearance.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Find this section in css/style.css (line ~8-16) */
+
+:root {
+    /* ════════════════════════════════════════════════════════
+       COLORS - Main Theme Colors
+       ════════════════════════════════════════════════════════ */
+    
+    --primary: #1a1a2e;           /* Dark Navy - Main background */
+    --secondary: #16213e;          /* Darker Navy - Secondary background */
+    --accent: #0f3460;             /* Deep Blue - Accent background */
+    --highlight: #e94560;          /* Coral Red - Primary accent color */
+    --text: #eaeaea;               /* Light Gray - Main text color */
+    --text-light: #b8b8b8;         /* Medium Gray - Secondary text */
+    --border: #2a2a3e;             /* Subtle Gray - Borders and dividers */
+    --success: #28a745;            /* Green - Status indicators */
+    --warning: #ffc107;            /* Yellow - Warnings */
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HOW TO CUSTOMIZE COLORS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* OPTION 1: Change Primary Colors Only
+   
+   Example: Change from dark theme to light theme
+   --primary: #f5f5f5;             (White/Light Gray)
+   --secondary: #e8e8e8;           (Light Gray)
+   --accent: #d4d4d4;              (Medium Gray)
+   --text: #1a1a2e;                (Dark text)
+   --text-light: #4a4a4a;          (Medium text)
+   --border: #cccccc;              (Light border)
+*/
+
+/* OPTION 2: Change Accent Color
+   
+   Current: Coral Red (#e94560)
+   
+   Alternative Palette Ideas:
+   - Blue:        #1e90ff (Electric Blue)
+   - Green:       #00d084 (Mint Green)
+   - Purple:      #9d4edd (Purple)
+   - Orange:      #ff6b35 (Bright Orange)
+   - Teal:        #00b4d8 (Teal)
+   - Pink:        #ff006e (Hot Pink)
+   - Cyan:        #00f5ff (Cyan)
+   
+   Simply change: --highlight: #YOUR_COLOR
+   This affects all accent elements!
+*/
+
+/* ═══════════════════════════════════════════════════════════════
+   COLOR USAGE IN YOUR PORTFOLIO
+   ═══════════════════════════════════════════════════════════════ */
+
+/*
+
+✓ --primary (#1a1a2e)
+  Used for: Main background, overall page background
+  Where: body { background: linear-gradient(...var(--primary)...) }
+
+✓ --secondary (#16213e)
+  Used for: Secondary backgrounds, footer background
+  Where: Footer, header background
+
+✓ --accent (#0f3460)
+  Used for: Accent backgrounds, button backgrounds
+  Where: Buttons, badges, active states
+
+✓ --highlight (#e94560) ⭐ MOST IMPORTANT
+  Used for: 
+  - Logo and branding
+  - Active navigation links
+  - Button backgrounds
+  - Card borders on hover
+  - Heading text colors
+  - Links and highlights
+  
+  WHERE TO CHANGE: Most visible changes come from changing this!
+  Line: --highlight: #e94560;
+
+✓ --text (#eaeaea)
+  Used for: All main text content
+  Where: Paragraphs, body text
+
+✓ --text-light (#b8b8b8)
+  Used for: Secondary text, subtle text
+  Where: Subtitles, helper text, metadata
+
+✓ --border (#2a2a3e)
+  Used for: Card borders, dividing lines
+  Where: Card borders, section separators
+
+✓ --success (#28a745)
+  Used for: Success messages, positive indicators
+  Where: Availability badge, success alerts
+
+✓ --warning (#ffc107)
+  Used for: Warning messages
+  Where: Alert boxes (if added)
+
+*/
+
+/* ═══════════════════════════════════════════════════════════════
+   STEP-BY-STEP COLOR CUSTOMIZATION
+   ═══════════════════════════════════════════════════════════════ */
+
+/*
+
+STEP 1: Decide Your Theme
+- Keep dark theme? Keep current colors
+- Go light? See OPTION 1 example above
+- Change accent? Pick new highlight color
+
+STEP 2: Open css/style.css
+
+STEP 3: Find the :root section (around line 8)
+
+STEP 4: Update the colors you want to change
+
+STEP 5: Save the file
+
+STEP 6: Refresh browser (Ctrl+Shift+R to clear cache)
+
+STEP 7: View changes immediately!
+
+*/
+
+/* ═══════════════════════════════════════════════════════════════
+   RECOMMENDED COLOR COMBINATIONS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* 
+DARK THEME (Current - Professional) ✓
+--primary: #1a1a2e (Dark Navy)
+--highlight: #e94560 (Coral Red)
+Result: Modern, professional, easy on the eyes
+
+DARK BLUE THEME (Tech-Focused)
+--primary: #0d1b2a
+--secondary: #1b3a52
+--accent: #2a5a7f
+--highlight: #00d9ff (Cyan)
+Result: Tech-forward, modern
+
+DARK GREEN THEME (Nature/Growth)
+--primary: #0a2818
+--secondary: #1a4d2e
+--accent: #2d6a4f
+--highlight: #52b788 (Green)
+Result: Calming, eco-friendly
+
+DARK PURPLE THEME (Creative)
+--primary: #1a0033
+--secondary: #2d1b4e
+--accent: #3d2645
+--highlight: #b5179e (Purple)
+Result: Creative, bold, artistic
+
+LIGHT THEME (Minimal)
+--primary: #ffffff
+--secondary: #f8f9fa
+--accent: #e9ecef
+--highlight: #0066cc (Blue)
+--text: #212529
+--text-light: #6c757d
+--border: #dee2e6
+Result: Clean, minimal, bright
+
+*/
+
+/* ═══════════════════════════════════════════════════════════════
+   BONUS: GRADIENT EXAMPLES
+   ═══════════════════════════════════════════════════════════════ */
+
+/*
+
+If you want to customize gradients:
+
+Current hero section background:
+background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(15, 52, 96, 0.1) 100%);
+
+Change to:
+background: linear-gradient(135deg, rgba(R, G, B, 0.1) 0%, rgba(R2, G2, B2, 0.1) 100%);
+
+Where R, G, B are the RGB values of your highlight color.
+
+Example with cyan (#00d9ff):
+- R = 0, G = 217, B = 255
+- background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(15, 52, 96, 0.1) 100%);
+
+*/
+
+/* ═══════════════════════════════════════════════════════════════
+   TYPOGRAPHY CUSTOMIZATION
+   ═══════════════════════════════════════════════════════════════ */
+
+/* 
+
+Current Font: System fonts (optimal performance)
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif; }
+
+To change font, find this in css/style.css and replace with:
+
+Google Fonts Example:
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+body { font-family: 'Inter', sans-serif; }
+
+Other popular choices:
+- 'Poppins', sans-serif
+- 'Outfit', sans-serif
+- 'JetBrains Mono', monospace (for code)
+- 'IBM Plex Sans', sans-serif
+
+*/
+
+/* ═══════════════════════════════════════════════════════════════
+   SPACING CUSTOMIZATION
+   ═══════════════════════════════════════════════════════════════ */
+
+/*
+
+Change padding/margins in these sections:
+
+.hero-section {
+    padding: 6rem 2rem;  ← Change these values for more/less space
+}
+
+.container {
+    max-width: 1200px;   ← Change for wider/narrower content
+    padding: 0 2rem;     ← Change for more/less side spacing
+}
+
+section {
+    margin: 4rem 0;      ← Change space between sections
+}
+
+*/
+
+/* ═══════════════════════════════════════════════════════════════
+   SHADOW CUSTOMIZATION
+   ═══════════════════════════════════════════════════════════════ */
+
+/*
+
+Current card shadow:
+box-shadow: 0 10px 40px rgba(233, 69, 96, 0.15);
+
+Customize:
+- First two numbers: X and Y offset
+- Third number: Blur radius (higher = softer)
+- Fourth number: Spread radius
+- rgba(233, 69, 96, 0.15): Color and opacity
+
+Stronger shadow:
+box-shadow: 0 15px 50px rgba(233, 69, 96, 0.25);
+
+Softer shadow:
+box-shadow: 0 5px 20px rgba(233, 69, 96, 0.1);
+
+*/
+
+/* ═══════════════════════════════════════════════════════════════
+   ANIMATION SPEED CUSTOMIZATION
+   ═══════════════════════════════════════════════════════════════ */
+
+/*
+
+Current transition speed: 0.3s
+transition: all 0.3s ease;
+
+Faster animations (snappier feel):
+transition: all 0.15s ease;
+
+Slower animations (smoother feel):
+transition: all 0.6s ease;
+
+Different easing options:
+- ease (default, smooth)
+- ease-in (fast start, slow end)
+- ease-out (slow start, fast end)
+- ease-in-out (slow start and end)
+- linear (constant speed)
+
+*/
+
+/* ═══════════════════════════════════════════════════════════════
+   BORDER RADIUS CUSTOMIZATION
+   ═══════════════════════════════════════════════════════════════ */
+
+/*
+
+Current rounded corners: 12px
+border-radius: 12px;
+
+More rounded (modern look):
+border-radius: 20px;
+
+Less rounded (minimal look):
+border-radius: 6px;
+
+Completely round (buttons, avatars):
+border-radius: 50%;
+
+Different corners:
+border-radius: 15px 15px 0 0;  (only top corners)
+border-radius: 10px 20px 10px 20px;  (alternating)
+
+*/
+
+/* ═══════════════════════════════════════════════════════════════
+   QUICK COLOR CHANGE TEMPLATE
+   ═══════════════════════════════════════════════════════════════ */
+
+/* 
+Copy-paste this to quickly change your theme:
+
+:root {
+    --primary: #1a1a2e;           /* Change this for main background */
+    --secondary: #16213e;         /* Change this for secondary background */
+    --accent: #0f3460;            /* Change this for accent background */
+    --highlight: #e94560;         /* CHANGE THIS for main accent color */
+    --text: #eaeaea;              /* Change this for main text */
+    --text-light: #b8b8b8;        /* Change this for secondary text */
+    --border: #2a2a3e;            /* Change this for borders */
+    --success: #28a745;           /* Change this for success messages */
+    --warning: #ffc107;           /* Change this for warnings */
+}
+
+Then refresh your browser (Ctrl+Shift+R) to see changes!
+*/
+
+/* ═══════════════════════════════════════════════════════════════
+   TESTING YOUR CHANGES
+   ═══════════════════════════════════════════════════════════════ */
+
+/*
+
+1. Save css/style.css
+2. Hard refresh browser (Ctrl+Shift+R or Cmd+Shift+R)
+3. Check:
+   - Does the accent color show on buttons?
+   - Is the highlight visible on links?
+   - Do card borders look right on hover?
+   - Is all text readable?
+   - Do project cards look good?
+
+If something looks off:
+- Check color contrast (text should be readable)
+- Test on mobile (responsive design)
+- Try different colors if current one doesn't work
+- Keep backup of original colors
+
+*/
+
+/* ═══════════════════════════════════════════════════════════════
+   SUPPORT & RESOURCES
+   ═══════════════════════════════════════════════════════════════ */
+
+/*
+
+Color Tools:
+- Color Picker: https://htmlcolorcodes.com
+- Palette Generator: https://coolors.co
+- Gradient Maker: https://www.gradient-generator.com
+- Contrast Checker: https://webaim.org/resources/contrastchecker/
+
+Typography:
+- Google Fonts: https://fonts.google.com
+- Font Pairing: https://www.fontpair.co
+
+CSS Reference:
+- MDN CSS Guide: https://developer.mozilla.org/en-US/docs/Web/CSS
+- CSS Tricks: https://css-tricks.com
+
+If something breaks:
+- Check the browser console (F12)
+- Look for error messages
+- Verify color format (should be #xxxxxx)
+- Test on different browser
+
+*/
+
+/* ═══════════════════════════════════════════════════════════════
+   YOU'RE READY TO CUSTOMIZE!
+   ═══════════════════════════════════════════════════════════════ */
+
+/*
+
+Next Steps:
+1. Open: css/style.css
+2. Find: :root { ... }
+3. Change: --highlight: #e94560
+4. Save file
+5. Refresh browser (Ctrl+Shift+R)
+6. See your portfolio in your new colors!
+
+Happy customizing! 🎨
+
+*/
