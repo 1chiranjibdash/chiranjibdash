@@ -1,5 +1,5 @@
 {
-  "name": "chiranib-dash-portfolio",
+  "name": "chiranjib-dash-portfolio",
   "version": "1.0.0",
   "description": "Professional portfolio showcasing 4+ years of Java backend development expertise in AWS, microservices, event-driven architectures, MySQL, Datadog monitoring, and TypeScript library development.",
   "main": "src/index.html",
@@ -22,7 +22,7 @@
     "spring-boot",
     "TypeScript"
   ],
-  "author": "Chiranib Dash",
+  "author": "Chiranjib Dash",
   "license": "MIT",
   "repository": {
     "type": "git",
