@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiranjib Dash - Resume | Java Backend & Cloud-Native Architect</title>
+    <meta name="description" content="Resume of Chiranjib Dash, Software Engineer and Cloud-Native Architect with 4+ years of professional experience in Java 21, Spring Boot, AWS, microservices, and financial systems.">
+    <meta name="keywords" content="Chiranjib Dash resume, Java backend engineer CV, Cloud-Native Architect resume, Spring Boot developer, AWS backend engineer, hiring Chiranjib Dash">
+    <meta name="author" content="Chiranjib Dash">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://chiranjibdash.com/resume.html">
+    <meta property="og:title" content="Chiranjib Dash - Resume | Java Backend & Cloud-Native Architect">
+    <meta property="og:description" content="Resume of Chiranjib Dash: 4+ years specializing in multimodule monoliths, high-scale Java microservices, AWS cloud architecture, and securing financial platforms for 250M+ users.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://chiranjibdash.com/resume.html">
+    <meta property="og:image" content="https://chiranjibdash.com/assets/og-image.svg">
+    <meta property="og:site_name" content="Chiranjib Dash Portfolio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chiranjib Dash - Resume | Java Backend & Cloud-Native Architect">
+    <meta name="twitter:description" content="Resume of Chiranjib Dash: 4+ years specializing in multimodule monoliths, high-scale Java microservices, AWS cloud architecture, and securing financial platforms for 250M+ users.">
+    <meta name="twitter:image" content="https://chiranjibdash.com/assets/og-image.svg">
+    <link rel="sitemap" type="application/xml" href="https://chiranjibdash.com/sitemap.xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Schema.org Structured Data for Recruiters & Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Chiranjib Dash",
+      "jobTitle": "Software Engineer | Java Backend & Cloud-Native Architect",
+      "url": "https://chiranjibdash.com",
+      "email": "contact@chiranjibdash.com",
+      "sameAs": [
+        "https://linkedin.com/in/1chiranjibdash",
+        "https://github.com/1chiranjibdash"
+      ],
+      "knowsAbout": [
+        "Java", "Java 21", "Spring Boot", "Spring Cloud", "Spring AI", "Spring Security",
+        "AWS Lambda", "AWS EventBridge", "AWS ECS", "AWS SQS", "AWS KMS", "Docker",
+        "MySQL Aurora", "Resilience4j", "Datadog APM", "Veracode", "DevSecOps"
+      ],
+      "description": "Performance-driven Software Engineer with 4+ years experience specializing in multimodule monoliths, high-scale Java microservices, and AWS cloud-native architecture."
+    }
+    </script>
+
+    <style>
+        .resume-page-container {
+            max-width: 920px;
+            margin: 3rem auto 6rem;
+            padding: 0 1.5rem;
+        }
+
+        .resume-action-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 14px;
+            padding: 1.2rem 2rem;
+            margin-bottom: 2.5rem;
+            backdrop-filter: blur(14px);
+            box-shadow: var(--shadow-md);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .resume-paper {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 18px;
+            padding: 3.5rem;
+            backdrop-filter: blur(14px);
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+
+        .resume-paper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+        }
+
+        .r-header {
+            border-bottom: 2px solid var(--border-subtle);
+            padding-bottom: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .r-name {
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+            margin-bottom: 0.3rem;
+        }
+
+        .r-title {
+            font-size: 1.25rem;
+            color: var(--accent-cyan);
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+        }
+
+        .r-contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem 2rem;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+        }
+
+        .r-contact-row a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .r-contact-row a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .r-section {
+            margin-bottom: 2.4rem;
+        }
+
+        .r-sec-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .r-skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .r-skill-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 1rem 1.2rem;
+        }
+
+        .r-skill-box strong {
+            display: block;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .r-skill-box p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .r-experience-item {
+            margin-bottom: 2.2rem;
+        }
+
+        .r-exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .r-role {
+            font-size: 1.18rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .r-date {
+            font-size: 0.85rem;
+            color: var(--accent-green);
+            font-weight: 700;
+        }
+
+        .r-client-tag {
+            font-size: 0.9rem;
+            color: var(--accent-purple);
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .r-bullets {
+            list-style: none;
+            margin-top: 0.8rem;
+        }
+
+        .r-bullets li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.65rem;
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        .r-bullets li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+            font-weight: 700;
+        }
+
+        .copy-toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--accent-green);
+            color: #060919;
+            padding: 0.8rem 1.4rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 10px 25px rgba(0, 255, 157, 0.4);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 100000;
+        }
+
+        .copy-toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Print formatting (Generates a clean ATS resume) */
+        @media print {
+            body {
+                background: #ffffff !important;
+                color: #000000 !important;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+            }
+
+            .navbar,
+            .resume-action-bar,
+            footer,
+            #cyber-canvas,
+            .cyber-cursor-dot,
+            .cyber-cursor-ring,
+            .copy-toast {
+                display: none !important;
+            }
+
+            .resume-page-container {
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            .resume-paper {
+                background: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+            }
+
+            .resume-paper::before {
+                display: none !important;
+            }
+
+            .r-name {
+                color: #000000 !important;
+                font-size: 22pt !important;
+            }
+
+            .r-title {
+                color: #1e3a8a !important;
+                font-size: 12pt !important;
+            }
+
+            .r-sec-title {
+                color: #1e3a8a !important;
+                border-bottom: 1.5pt solid #1e3a8a !important;
+                font-size: 11pt !important;
+            }
+
+            .r-role {
+                color: #000000 !important;
+                font-size: 10.5pt !important;
+            }
+
+            .r-client-tag {
+                color: #4338ca !important;
+                font-size: 9.5pt !important;
+            }
+
+            .r-contact-row a,
+            .r-bullets li,
+            .r-skill-box p,
+            .r-section p {
+                color: #222222 !important;
+                font-size: 9pt !important;
+            }
+
+            .r-skill-box {
+                background: #f8fafc !important;
+                border: 1px solid #cbd5e1 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Chiranjib Dash home">
+                <span class="logo-badge">CD</span>
+                <span class="logo-text">CHIRANJIB DASH</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-nav-terminal" onclick="window.cyberTerminal &amp;&amp; window.cyberTerminal.open()" aria-label="Open CLI Terminal" title="Terminal (Cmd+K)">
+                    <span class="terminal-kbd-prompt">&gt;_</span>
+                    <span class="nav-btn-text">CLI</span>
+                </button>
+                <button id="sfx-toggle" class="sfx-toggle" aria-label="Toggle sound effects">
+                    <span class="toggle-icon">
+                        <svg class="sfx-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+                    </span>
+                    <span class="toggle-label">SFX: OFF</span>
+                </button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <span class="toggle-icon">🌙</span>
+                    <span class="toggle-label">DARK</span>
+                </button>
+                <button class="mobile-hamburger" id="mobile-hamburger" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="resume-page-container">
+        <!-- Recruiter Action Bar -->
+        <div class="resume-action-bar">
+            <div>
+                <span class="section-eyebrow"><span class="terminal-prefix">$_</span>executive-cv</span>
+                <div style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.2rem;">
+                    Updated: 2026 • Verified Professional Credentials
+                </div>
+            </div>
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+                <button class="btn btn-secondary" onclick="copyContactEmail()" style="padding: 0.7rem 1.2rem; font-size: 0.85rem;">
+                    <span>📋 Copy Email</span>
+                </button>
+                <button class="btn btn-primary" onclick="window.print()" style="padding: 0.7rem 1.4rem; font-size: 0.85rem;">
+                    <span>🖨️ Print / Save as PDF</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Printable ATS-Optimized Document Container -->
+        <article class="resume-paper">
+            <!-- Header -->
+            <header class="r-header">
+                <h1 class="r-name">CHIRANJIB DASH</h1>
+                <div class="r-title">Software Engineer | Java Backend &amp; Cloud-Native Architect</div>
+                <div class="r-contact-row">
+                    <span>📧 <a href="mailto:contact@chiranjibdash.com">contact@chiranjibdash.com</a></span>
+                    <span>🌐 <a href="https://chiranjibdash.com">chiranjibdash.com</a></span>
+                    <span>💼 <a href="https://linkedin.com/in/1chiranjibdash" target="_blank" rel="noopener noreferrer">linkedin.com/in/1chiranjibdash</a></span>
+                    <span>💻 <a href="https://github.com/1chiranjibdash" target="_blank" rel="noopener noreferrer">github.com/1chiranjibdash</a></span>
+                    <span>📍 India • Open to Remote &amp; Relocation</span>
+                </div>
+            </header>
+
+            <!-- Professional Summary -->
+            <section class="r-section">
+                <h2 class="r-sec-title">Professional Summary</h2>
+                <p style="color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
+                    Performance-driven Software Engineer with <strong>4+ years of experience</strong> specializing in multimodule monoliths, high-scale Java microservices, and AWS cloud-native architecture. Expert in modernizing legacy systems, optimizing application throughput by 15%, and leveraging Spring AI and Generative AI models within Jira and Confluence to reduce development cycles by 40%. Proven track record in securing financial data for major credit bureaus through Spring Security, end-to-end encryption (AWS-KMS), and rigorous DevSecOps practices using Docker and Harness.
+                </p>
+            </section>
+
+            <!-- Technical Skills -->
+            <section class="r-section">
+                <h2 class="r-sec-title">Technical Skills</h2>
+                <div class="r-skills-grid">
+                    <div class="r-skill-box">
+                        <strong>Languages</strong>
+                        <p>Java (JDK 8/17/21), TypeScript, SQL, JSP &amp; Servlets</p>
+                    </div>
+                    <div class="r-skill-box">
+                        <strong>Frameworks &amp; APIs</strong>
+                        <p>Spring Boot, Spring Security, Spring AOP, Spring AI, Spring Batch, Spring WebFlux, Resilience4j, Hibernate/JPA, RESTful Web APIs</p>
+                    </div>
+                    <div class="r-skill-box">
+                        <strong>Cloud Infrastructure (AWS)</strong>
+                        <p>AWS Lambda, SQS, EventBridge, ECS, ECR, S3, KMS, Amazon Aurora (MySQL), API Gateway, IAM</p>
+                    </div>
+                    <div class="r-skill-box">
+                        <strong>Architecture Patterns</strong>
+                        <p>Microservices, Multimodule Monoliths, Event-Driven Architecture, SOLID Principles</p>
+                    </div>
+                    <div class="r-skill-box">
+                        <strong>Databases</strong>
+                        <p>MySQL (Amazon Aurora), DynamoDB, Indexing &amp; Query Plan Optimization</p>
+                    </div>
+                    <div class="r-skill-box">
+                        <strong>DevOps &amp; Security</strong>
+                        <p>Docker, Harness, GitHub Actions, JFrog Artifactory, Veracode, CodeQL, SonarQube, BlueOptima</p>
+                    </div>
+                    <div class="r-skill-box">
+                        <strong>Observability &amp; QA</strong>
+                        <p>Datadog APM, JUnit, Insomnia, JMeter Load Testing, Cucumber, Code Profiling</p>
+                    </div>
+                    <div class="r-skill-box">
+                        <strong>AI &amp; Productivity</strong>
+                        <p>GitHub Copilot, Claude 4.6, ChatGPT 5.4, Confluence Rovo, Spring AI, Agile/Scrum</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Professional Experience -->
+            <section class="r-section">
+                <h2 class="r-sec-title">Professional Experience</h2>
+
+                <div class="r-experience-item">
+                    <div class="r-exp-header">
+                        <div class="r-role">NetWeb Software | Software Engineer</div>
+                        <div class="r-date">April 2022 – Present</div>
+                    </div>
+                    <div class="r-client-tag">
+                        Key Client: Major Credit Bureau – Subscriber Management &amp; Financial Systems
+                    </div>
+                    <ul class="r-bullets">
+                        <li><strong>System Modernization &amp; Migration:</strong> Orchestrated the migration of a legacy batch-based notification system to an AWS Lambda and EventBridge serverless architecture, improving delivery reliability by <strong>90%</strong>.</li>
+                        <li><strong>Java 21 Upgrade:</strong> Led the technical migration of the microservice fleet from JDK 17 to JDK 21, implementing virtual threads to enhance performance and long-term maintainability.</li>
+                        <li><strong>Security Engineering:</strong> Spearheaded the implementation of End-to-End Encryption for REST APIs handling <strong>250M+ users</strong> using AWS-KMS, while resolving high-severity vulnerabilities flagged by Veracode and CodeQL.</li>
+                        <li><strong>AI-Augmented Development:</strong> Integrated Claude 4.6 and Confluence Rovo into the Agile workflow, accelerating documentation and story grooming by <strong>40%</strong>, significantly increasing team velocity.</li>
+                        <li><strong>Performance Optimization:</strong> Conducted deep code profiling using JMeter and BlueOptima; identified and optimized slow queries to increase application throughput by <strong>15%</strong> and reduced API timeouts by 10%.</li>
+                        <li><strong>Reliability &amp; Resilience:</strong> Replaced legacy Hystrix architecture with Resilience4j, improving system fault tolerance and establishing consistent billing data rollback points.</li>
+                        <li><strong>Quality Assurance:</strong> Drastically reduced regression testing cycles from <strong>2 weeks to 8 hours</strong> by overhauling the automation suite and increasing JUnit coverage from 40% to <strong>85%</strong>.</li>
+                        <li><strong>Observability:</strong> Built custom Datadog dashboards, reducing the mean time to resolution (MTTR) for production incidents by <strong>20–30%</strong>.</li>
+                        <li><strong>Stakeholder Collaboration:</strong> Actively lead Agile ceremonies and technical requirement discussions with Product Owners via Jira and Confluence to ensure technical alignment with business goals.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Key Projects & Achievements -->
+            <section class="r-section">
+                <h2 class="r-sec-title">Key Projects &amp; Achievements</h2>
+
+                <div class="r-experience-item">
+                    <div class="r-exp-header">
+                        <div class="r-role">Zero-Downtime Migration Tool</div>
+                        <div class="r-date">Standalone Java • Multi-Threading</div>
+                    </div>
+                    <ul class="r-bullets">
+                        <li>Developed standalone multi-threaded Java applications for production user migrations, maintaining <strong>100% SLA compliance</strong>.</li>
+                    </ul>
+                </div>
+
+                <div class="r-experience-item">
+                    <div class="r-exp-header">
+                        <div class="r-role">Feature Flagging &amp; Retention Optimization</div>
+                        <div class="r-date">Split.io Integration • A/B Testing</div>
+                    </div>
+                    <ul class="r-bullets">
+                        <li>Integrated Split.io for A/B testing and retention flagging, directly improving customer email response rates and rollout safety.</li>
+                    </ul>
+                </div>
+
+                <div class="r-experience-item">
+                    <div class="r-exp-header">
+                        <div class="r-role">DevSecOps &amp; Artifact Strategy</div>
+                        <div class="r-date">JFrog Artifactory • AWS ECR • Harness</div>
+                    </div>
+                    <ul class="r-bullets">
+                        <li>Streamlined secure artifact management and container deployment pipelines using JFrog Artifactory, Docker, and AWS ECR.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Education (Masked) -->
+            <section class="r-section" style="margin-bottom: 0;">
+                <h2 class="r-sec-title">Education</h2>
+                <div class="r-skill-box">
+                    <strong>Bachelor of Technology (B.Tech) in Electrical and Electronics Engineering</strong>
+                    <p style="color: var(--text-secondary); margin-top: 0.3rem;">Accredited Technical Institute <em>(Institution name masked for privacy)</em></p>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <!-- Copy Email Toast Notification -->
+    <div id="copy-toast" class="copy-toast">
+        ✓ Email copied: contact@chiranjibdash.com
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Chiranjib Dash. Engineered with Modern Web Standards &amp; ATS-Ready Formatting.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/1chiranjibdash" target="_blank" rel="noopener noreferrer">
+                    <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46V10.9M7.86 6.54a1.63 1.63 0 0 0-1.63 1.63 1.63 1.63 0 0 0 1.63 1.63 1.63 1.63 0 0 0 1.63-1.63A1.63 1.63 0 0 0 7.86 6.54z"/></svg></span>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/1chiranjibdash" target="_blank" rel="noopener noreferrer">
+                    <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg></span>
+                    GitHub
+                </a>
+                <a href="mailto:contact@chiranjibdash.com">
+                    <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span>
+                    Email
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/audio.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/terminal.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        function copyContactEmail() {
+            navigator.clipboard.writeText('contact@chiranjibdash.com').then(() => {
+                const toast = document.getElementById('copy-toast');
+                if (toast) {
+                    toast.classList.add('show');
+                    if (window.cyberAudio) window.cyberAudio.playSuccess();
+                    setTimeout(() => toast.classList.remove('show'), 2500);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

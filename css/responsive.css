@@ -1,71 +1,176 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Ubuntu Sans Mono', 'Roboto', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-}
+/* ═════════════════════════════════════════════════════════════════════
+   MOBILE & TABLET RESPONSIVE REFINEMENTS
+   ═════════════════════════════════════════════════════════════════════ */
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
+@media (max-width: 1024px) {
+    .hero-section h1 {
+        font-size: 3.8rem;
+    }
 
-@media (max-width: 1200px) {
-    .container {
-        padding: 15px;
+    .sim-dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .pipeline-track {
+        gap: 0.35rem;
+    }
+
+    .pipe-node {
+        min-width: 105px;
+        padding: 0.9rem 0.5rem;
+    }
+
+    .projects-grid,
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.8rem;
     }
 }
 
-@media (max-width: 992px) {
-    .container {
-        padding: 10px;
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 1.2rem;
+    }
+
+    .mobile-hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 65px;
+        left: 0;
+        right: 0;
+        background: rgba(6, 9, 25, 0.98);
+        backdrop-filter: blur(25px);
+        flex-direction: column;
+        padding: 2.5rem 1.5rem;
+        gap: 1.8rem;
+        border-bottom: 1px solid var(--border-subtle);
+        transform: translateY(-120%);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 999;
+    }
+
+    [data-theme="light"] .nav-menu {
+        background: rgba(240, 244, 253, 0.98);
+    }
+
+    .nav-menu.mobile-open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+    }
+
+    .nav-menu a {
+        font-size: 1.15rem;
+        text-align: center;
+        width: 100%;
+        padding: 0.6rem 0;
+    }
+
+    .hero-section {
+        min-height: 75vh;
+        padding: 3rem 1rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2.8rem;
+    }
+
+    .typewriter-wrapper {
+        font-size: 1.15rem;
+        min-height: 3rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .cyber-simulator-card {
+        padding: 1.4rem;
+    }
+
+    .sim-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sim-controls {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .sim-controls button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .pipeline-track {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 1rem;
+    }
+
+    .sim-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid-container {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+    }
+
+    .contact-card-wrapper {
+        padding: 1.8rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    /* Disable custom cursor elements on mobile */
+    .cyber-cursor-dot,
+    .cyber-cursor-ring {
+        display: none !important;
     }
 }
 
-.header, .footer {
-    text-align: center;
-    padding: 20px 0;
-}
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
 
-.header h1, .footer h2 {
-    font-size: 2em;
-}
+    .hero-radar-badge {
+        font-size: 0.72rem;
+        padding: 0.35rem 0.8rem;
+    }
 
-.skills, .projects, .contact {
-    margin: 20px 0;
-}
+    .stat-metric-number {
+        font-size: 2.5rem;
+    }
 
-.skills ul, .projects ul {
-    list-style-type: none;
-    padding: 0;
-}
+    .projects-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
 
-.skills li, .projects li {
-    margin: 10px 0;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact input, .contact textarea {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact button {
-    padding: 10px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact button:hover {
-    background-color: #0056b3;
+    .terminal-window {
+        height: 90vh;
+        max-height: 90vh;
+    }
 }

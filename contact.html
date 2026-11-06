@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,9 +13,12 @@
     <meta property="og:description" content="Reach out to Chiranjib Dash for backend development, cloud architecture, and freelance work.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chiranjibdash.com/contact.html">
+    <meta property="og:image" content="https://chiranjibdash.com/assets/og-image.svg">
+    <meta property="og:site_name" content="Chiranjib Dash Portfolio">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contact Me - Chiranjib Dash">
     <meta name="twitter:description" content="Reach out to Chiranjib Dash for backend development, cloud architecture, and freelance work.">
+    <meta name="twitter:image" content="https://chiranjibdash.com/assets/og-image.svg">
     <link rel="sitemap" type="application/xml" href="https://chiranjibdash.com/sitemap.xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,112 +27,207 @@
     <link rel="shortcut icon" href="favicon.svg">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Chiranjib Dash",
+        "jobTitle": "Java Backend Developer & Cloud Architect",
+        "url": "https://chiranjibdash.com/contact.html",
+        "email": "contact@chiranjibdash.com"
+      }
+    }
+    </script>
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo" aria-label="Chiranjib Dash home">CD</a>
+            <a href="index.html" class="logo" aria-label="Chiranjib Dash home">
+                <span class="logo-badge">CD</span>
+                <span class="logo-text">CHIRANJIB DASH</span>
+            </a>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="resume.html">Resume</a></li>
             </ul>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+            <div class="nav-actions">
+                <button class="btn-nav-terminal" onclick="window.cyberTerminal &amp;&amp; window.cyberTerminal.open()" aria-label="Open CLI Terminal" title="Terminal (Cmd+K)">
+                    <span class="terminal-kbd-prompt">&gt;_</span>
+                    <span class="nav-btn-text">CLI</span>
+                </button>
+                <button id="sfx-toggle" class="sfx-toggle" aria-label="Toggle sound effects">
+                    <span class="toggle-icon">
+                        <svg class="sfx-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+                    </span>
+                    <span class="toggle-label">SFX: OFF</span>
+                </button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <span class="toggle-icon">🌙</span>
+                    <span class="toggle-label">DARK</span>
+                </button>
+                <button class="mobile-hamburger" id="mobile-hamburger" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
+    <!-- Main Content -->
     <main class="container">
-        <section class="hero-section">
-            <h1>Get In Touch</h1>
-            <p class="subtitle">Let's discuss your project or freelancing opportunity</p>
+        <!-- Hero Header -->
+        <section class="hero-section" style="min-height: 40vh; padding: 3rem 1rem 2rem;">
+            <div class="hero-radar-badge">
+                <span class="radar-dot"></span>
+                <span>TRANSMISSION PORTAL &amp; INQUIRIES</span>
+            </div>
+            <h1 class="scramble-text" data-original="Get In Touch">Get In Touch</h1>
+            <p style="font-size: 1.3rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 1.5rem;">Let's discuss your distributed system challenges, freelance projects, or full-time opportunities</p>
         </section>
 
+        <!-- Contact Form Section -->
         <section class="contact-section">
-            <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid #2a2a3e; border-radius: 12px; padding: 3rem; backdrop-filter: blur(10px);">
-                <h2 style="color: #e94560; margin-bottom: 2rem;">Send Me a Message</h2>
+            <div class="contact-card-wrapper">
+                <div>
+                    <span class="section-eyebrow"><span class="terminal-prefix">$_</span>send-message</span>
+                </div>
+                <h2 style="font-size: 2.2rem; color: var(--text-primary); margin: 0.6rem 0 2rem; font-weight: 800;">Send Me a Message</h2>
+
                 <form id="contact-form" action="https://formspree.io/f/mpqkaebe" method="POST">
                     <input type="hidden" name="_subject" value="Portfolio contact request">
                     <input type="hidden" name="_next" value="https://chiranjibdash.com/contact.html?success=true">
+
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Your name">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="e.g. Alex Rivera" autocomplete="name">
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        <label for="email">Your Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="e.g. alex@enterprise.com" autocomplete="email">
                     </div>
 
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required placeholder="Project inquiry or collaboration">
+                        <input type="text" id="subject" name="subject" required placeholder="e.g. Microservices Architecture Consulting / Senior Role">
                     </div>
 
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project or opportunity..."></textarea>
+                        <label for="message">Message Details</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Describe your project, architectural goals, or team requirements..."></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.2rem;">
+                        <span>Transmit Message Payload</span>
+                        <span aria-hidden="true">⚡</span>
+                    </button>
                 </form>
             </div>
         </section>
 
-        <section class="contact-info">
-            <div class="info-card">
-                <h3><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 7.5C3 6.672 3.672 6 4.5 6h15c.828 0 1.5.672 1.5 1.5v9c0 .828-.672 1.5-1.5 1.5h-15A1.5 1.5 0 0 1 3 16.5v-9Z"/><path d="M21 7.5 12 13.5 3 7.5"/></svg></span>Email</h3>
-                <p>
-                    <a href="mailto:work.chiranjib@gmail.com">work.chiranjib@gmail.com</a>
-                </p>
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #b8b8b8;">Response within 24 hours</p>
-            </div>
+        <!-- Direct Contact Info Cards (3D Tilt) -->
+        <section>
+            <div class="contact-info-grid">
+                <div class="info-card">
+                    <h3><span>✉️</span> Direct Dispatch</h3>
+                    <p style="margin: 0.8rem 0;">
+                    <div style="margin: 0.8rem 0; display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+                        <button class="btn btn-secondary" onclick="copyContactEmail()" style="padding: 0.4rem 0.8rem; font-size: 0.78rem;">
+                            <span>📋 Copy Email</span>
+                        </button>
+                        <a href="mailto:contact@chiranjibdash.com?subject=Interview%20Invitation:%20Senior%20Java%20Backend%20Engineer" class="btn btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.78rem; border-color: var(--accent-green); color: var(--accent-green);">
+                            <span>⚡ HR Fast-Track</span>
+                        </a>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--accent-green); font-weight: 600;">Response guaranteed within 24 hours</p>
+                </div>
 
-            <div class="info-card">
-                <h3><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 8.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0 2.5v8h3v-8H6Zm4.5 0v8h3v-5.5c0-1.5.75-2.5 2.25-2.5 1.5 0 1.5 1.25 1.5 2.5v5.5h3v-6c0-3-1.75-4.25-4.25-4.25-2.25 0-3.25 1.25-3.75 2.25V11Z"/></svg></span>LinkedIn</h3>
-                <p>
-                    <a href="https://www.linkedin.com/in/1chiranjibdash" target="_blank">linkedin.com/in/1chiranjibdash</a>
-                </p>
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #b8b8b8;">Connect for job opportunities</p>
-            </div>
+                <div class="info-card">
+                    <h3><span>💼</span> Professional Network</h3>
+                    <p style="margin: 0.8rem 0;">
+                        <a href="https://www.linkedin.com/in/1chiranjibdash" target="_blank" rel="noopener noreferrer" style="font-size: 1.05rem; font-weight: 700;">linkedin.com/in/1chiranjibdash</a>
+                    </p>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Direct messaging &amp; career updates</p>
+                </div>
 
-            <div class="info-card">
-                <h3><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C7.037 2 3 6.037 3 11.5c0 4.277 2.783 7.9 6.663 9.18.487.09.663-.216.663-.48 0-.238-.009-.868-.014-1.705-2.71.588-3.28-1.305-3.28-1.305-.443-1.128-1.08-1.433-1.08-1.433-.88-.606.066-.594.066-.594.974.07 1.486 1.017 1.486 1.017.866 1.481 2.273 1.055 2.827.806.087-.62.337-1.064.611-1.31-2.176-.247-4.462-1.104-4.462-4.92 0-1.086.389-1.97 1.026-2.662-.103-.249-.445-1.255.098-2.617 0 0 .836-.268 2.743 1.02A9.517 9.517 0 0 1 12 6.79c.853 0 1.71.109 2.506.32 1.906-1.288 2.741-1.02 2.741-1.02.545 1.362.202 2.368.099 2.617.639.691 1.024 1.576 1.024 2.662 0 3.823-2.29 4.67-4.472 4.919.347.298.656.887.656 1.79 0 1.292-.012 2.334-.012 2.653 0 .268.175.578.667.48C18.217 19.4 21 15.777 21 11.5 21 6.037 16.963 2 12 2Z"/></svg></span>GitHub</h3>
-                <p>
-                    <a href="https://github.com/1chiranjibdash" target="_blank">github.com/1chiranjibdash</a>
-                </p>
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #b8b8b8;">View my open-source work</p>
+                <div class="info-card">
+                    <h3><span>💻</span> Source Repositories</h3>
+                    <p style="margin: 0.8rem 0;">
+                        <a href="https://github.com/1chiranjibdash" target="_blank" rel="noopener noreferrer" style="font-size: 1.05rem; font-weight: 700;">github.com/1chiranjibdash</a>
+                    </p>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Open-source microservices &amp; libraries</p>
+                </div>
             </div>
         </section>
 
-        <section class="cta-section" style="margin-top: 4rem;">
-            <h2>Available For</h2>
-            <p>Full-time positions • Freelance projects • Consulting • Contract work</p>
-            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
-                <div class="feature-item">
-                    <span class="feature-pill">Backend Development</span>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-pill">System Architecture</span>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-pill">Code Review & Mentoring</span>
+        <!-- Availability Scope Pills -->
+        <section class="cta-section" style="background: var(--bg-card); border: 1px solid var(--border-hover); border-radius: 20px; padding: 4.5rem 2rem; text-align: center; backdrop-filter: blur(14px); margin: 6rem 0; position: relative; overflow: hidden;">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <span class="section-eyebrow">Engagement Scopes</span>
+                <h2 style="font-size: 2.5rem; color: var(--text-primary); margin: 0.8rem 0 1rem; font-weight: 800;">Available For Immediate Engagement</h2>
+                <p style="font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.7;">Flexible across contract consulting, freelance architecture sprints, and full-time senior engineering.</p>
+                
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <span style="padding: 0.65rem 1.3rem; border-radius: 999px; background: rgba(0, 240, 255, 0.1); border: 1px solid var(--border-subtle); color: var(--accent-cyan); font-weight: 700; font-size: 0.9rem;">☕ Backend Development (Spring Boot / Java 21)</span>
+                    <span style="padding: 0.65rem 1.3rem; border-radius: 999px; background: rgba(139, 92, 246, 0.1); border: 1px solid var(--border-laser); color: var(--accent-purple); font-weight: 700; font-size: 0.9rem;">☁️ AWS Distributed Cloud Architecture</span>
+                    <span style="padding: 0.65rem 1.3rem; border-radius: 999px; background: rgba(0, 255, 157, 0.1); border: 1px solid rgba(0, 255, 157, 0.3); color: var(--accent-green); font-weight: 700; font-size: 0.9rem;">⚡ MySQL &amp; Query Tuning Optimization</span>
+                    <span style="padding: 0.65rem 1.3rem; border-radius: 999px; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); color: var(--accent-amber); font-weight: 700; font-size: 0.9rem;">📊 Datadog APM &amp; Observability Systems</span>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p>&copy; 2026 Chiranjib Dash. All rights reserved.</p>
+            <p>&copy; 2026 Chiranjib Dash. Engineered with Modern Web Standards &amp; Cyber Telemetry.</p>
             <div class="social-links">
-                <a href="https://linkedin.com/in/1chiranjibdash" target="_blank"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 8.5A1.5 1.5 0 1 1 6.5 5.5a1.5 1.5 0 0 1 0 3Zm.25 1.5H4.5v8h2.25v-8Zm4.5 0v8h2.25v-4.25c0-1.3.5-2.25 2-2.25 1.5 0 1.5 1.312 1.5 2.25V18h2.25v-4.5c0-3-1.75-4.25-4.5-4.25-2.25 0-3.25 1.25-3.75 2.25Zm4.25-3.75h.016C15.41 5.25 16.5 6.35 16.5 8.25V9h-2.25V8.25c0-.5-.3-.75-.75-.75s-.75.25-.75.75V9H9.75V5.75H12v.75h.016Z"/></svg></span>LinkedIn</a>
-                <a href="https://github.com/1chiranjibdash" target="_blank"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C7.58 2 4 5.58 4 10.25c0 3.42 2.2 6.33 5.25 7.35.38.07.52-.16.52-.36 0-.18-.01-.66-.01-1.16-2.13.47-2.58-1.04-2.58-1.04-.35-.9-.86-1.14-.86-1.14-.7-.48.05-.47.05-.47.78.05 1.2.8 1.2.8.68 1.15 1.78.82 2.22.63.07-.5.27-.82.5-1.01-1.7-.19-3.49-.85-3.49-3.8 0-.84.3-1.53.79-2.07-.08-.2-.35-1.01.08-2.1 0 0 .64-.21 2.1.8a7.24 7.24 0 0 1 1.92-.27c.65 0 1.3.09 1.92.27 1.46-1.01 2.1-.8 2.1-.8.43 1.09.16 1.9.08 2.1.5.54.79 1.23.79 2.07 0 2.96-1.8 3.61-3.52 3.8.28.24.53.72.53 1.45 0 1.05-.01 1.9-.01 2.15 0 .2.14.43.52.36C17.8 16.58 20 13.67 20 10.25 20 5.58 16.42 2 12 2Z"/></svg></span>GitHub</a>
-                <a href="https://twitter.com" target="_blank"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 19c7.5 0 11.6-6.3 11.6-11.8 0-.18 0-.35-.01-.53A8.3 8.3 0 0 0 22 4.6a8.1 8.1 0 0 1-2.3.6 4.02 4.02 0 0 0 1.8-2.2 8.14 8.14 0 0 1-2.6 1 4.07 4.07 0 0 0-6.9 3.7 11.54 11.54 0 0 1-8.4-4.3 4.05 4.05 0 0 0 1.3 5.4A4 4 0 0 1 2 8.9v.05a4.07 4.07 0 0 0 3.3 4 4.07 4.07 0 0 1-1.8.07 4.08 4.08 0 0 0 3.8 2.8A8.2 8.2 0 0 1 2 18.4a11.62 11.62 0 0 0 6.3 1.8"/></svg></span>Twitter</a>
+                <a href="https://linkedin.com/in/1chiranjibdash" target="_blank" rel="noopener noreferrer">
+                    <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46V10.9M7.86 6.54a1.63 1.63 0 0 0-1.63 1.63 1.63 1.63 0 0 0 1.63 1.63 1.63 1.63 0 0 0 1.63-1.63A1.63 1.63 0 0 0 7.86 6.54z"/></svg></span>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/1chiranjibdash" target="_blank" rel="noopener noreferrer">
+                    <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg></span>
+                    GitHub
+                </a>
+                <a href="mailto:contact@chiranjibdash.com">
+                    <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span>
+                    Email
+                </a>
             </div>
         </div>
     </footer>
 
+    <!-- Copy Email Toast Notification -->
+    <div id="copy-toast" class="copy-toast">
+        ✓ Email copied: contact@chiranjibdash.com
+    </div>
+
+    <!-- Futuristic Engine Scripts -->
+    <script src="js/audio.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/terminal.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        function copyContactEmail() {
+            navigator.clipboard.writeText('contact@chiranjibdash.com').then(() => {
+                const toast = document.getElementById('copy-toast');
+                if (toast) {
+                    toast.classList.add('show');
+                    if (window.cyberAudio) window.cyberAudio.playSuccess();
+                    setTimeout(() => toast.classList.remove('show'), 2500);
+                }
+            });
+        }
+    </script>
 </body>
 </html>

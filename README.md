@@ -1,205 +1,92 @@
-# Chiranjib Dash - Professional Portfolio
+# Chiranjib Dash - High-Tech Futuristic Portfolio
 
-A modern, minimalistic portfolio website showcasing Java backend development expertise, cloud architecture, and 4+ years of professional experience.
+A modern, cyberpunk-inspired futuristic portfolio showcasing 4+ years of Java backend development expertise, cloud architecture (AWS, microservices, event-driven pipelines, MySQL query tuning, Datadog monitoring), and TypeScript SDK engineering.
 
-## 🚀 Features
+## 🚀 Futuristic & Interactive Features
 
-- **Modern & Minimalistic Design**: Clean, professional dark theme with gradient accents
-- **Responsive Layout**: Fully optimized for desktop, tablet, and mobile devices
-- **Professional Content**: Detailed expertise in Java, AWS, MySQL, and microservices
-- **Project Showcase**: Display of real-world projects with technologies used
-- **Contact Form**: Easy way for recruiters and clients to get in touch
-- **Fast Loading**: No external dependencies, pure HTML/CSS/JavaScript
-- **SEO Optimized**: Proper meta tags and semantic HTML
+- **Distributed Neural Mesh Background (`js/particles.js`)**: Interactive 60fps HTML5 Canvas simulating distributed microservice nodes (Java 21, AWS SQS, ECS, MySQL, Datadog) connected by quantum telemetry lines and streaming glowing event packets with mouse gravity physics.
+- **Live Event-Driven Architecture Simulator (`js/simulator.js`)**: Real-time interactive pipeline on the home page (`Client Request ➔ API Gateway ➔ Spring Boot ➔ AWS SQS ➔ Worker ➔ MySQL & Datadog`) with interactive transaction dispatching, automated event streaming, live latency telemetry, and stdout trace streaming.
+- **Cyber Command Terminal / CLI (`js/terminal.js`)**: Press `Cmd+K` or `Ctrl+K` (or click the top HUD trigger) to launch an interactive cyber CLI supporting `help`, `about`, `skills`, `projects`, `stats`, `theme`, `sfx`, `clear`, and `exit`.
+- **Synthesizer Sound Effects (`js/audio.js`)**: Zero external dependencies — built using native Web Audio API oscillators for sci-fi hover clicks, packet transfers, modal whooshes, and power-up sounds (accessible and muted by default with an instant HUD toggle).
+- **Interactive 3D Perspective Tilt & Specular Glare**: Cards across all pages feature real-time 3D cursor tilt with dynamic radial glare spotlights tracking cursor position.
+- **System Architecture Deep-Dive Modals**: Project cards include an "Architecture Spec" modal showcasing system blueprints, dataflow diagrams, throughput metrics, and resilience highlights.
+- **Category Filter Tabs**: Instant filtering on `projects.html` across Microservices, Cloud & AWS, Monitoring, Databases, and SDKs.
+- **Scroll-Triggered Metric Counters**: Real-time counter animations on scroll for years of experience, daily transaction volumes, and performance optimization stats.
+- **Text Scramble / Decryption Effect**: Section titles decrypt in real-time with randomized glyph decoding on scroll and hover.
+- **Multi-Role Typewriter**: Dynamic typing effect on the landing hero cycling through backend specializations.
+- **Custom Cyber Cursor**: Futuristic glowing inner dot and trailing reticle with snap states for interactive elements.
+- **Dark Cyber & Sleek Light Themes**: Full theme switching with localStorage state persistence.
 
 ## 📋 Pages
 
 ### Home (`index.html`)
-- Landing page with quick introduction
-- Key highlights and statistics
-- Call-to-action buttons
+- Live telemetry HUD ticker (Cluster status, Latency, Uptime SLA, TPS)
+- Cyberpunk Hero with multi-role typewriter
+- Interactive Live Event-Driven Microservices Simulator widget
+- Architecture philosophy overview
+- Scroll-triggered metric telemetry cards
+- Call-to-action cards
 
 ### About (`about.html`)
-- Detailed professional background
-- Technical expertise categorized by domain
-- Experience highlights
-- Professional strengths and achievements
+- Professional engineering dossier
+- 6 Technical Expertise categories with 3D perspective tilt
+- Experience milestones & achievements
+- Availability indicators for freelance & full-time senior roles
 
 ### Projects (`projects.html`)
-- Featured projects with descriptions
-- Technologies used for each project
-- Links to GitHub repositories and live demos
-- Project categories:
-  - Event-Driven Systems
-  - Microservices Architecture
-  - Cloud Infrastructure
-  - Testing & Performance
-  - Database Optimization
-  - TypeScript Libraries
+- 6 Production-grade systems with tech chips and metric badges
+- Category filtering tabs
+- Interactive System Architecture Modals with ASCII dataflow blueprints
 
 ### Contact (`contact.html`)
-- Contact form for inquiries
-- Direct contact information
-- Multiple social media links
-- Availability indicators
+- Cyber transmission form with Formspree integration
+- Direct dispatch info cards (Email, LinkedIn, GitHub) with 3D tilt
+- Engagement scope pills
 
 ## 🛠 Technical Stack
 
-- **HTML5**: Semantic markup
-- **CSS3**: Modern styling with CSS variables, gradients, and animations
-- **JavaScript**: Vanilla JavaScript for interactivity
-- **Responsive Design**: Mobile-first approach with media queries
+- **HTML5**: Semantic markup with accessibility ARIA attributes
+- **CSS3**: CSS custom properties, grid patterns, glassmorphism, 3D transforms, glowing neons, and responsive media queries
+- **Vanilla JavaScript**: Pure ES6+ modular architecture (Zero external npm dependencies)
+- **Web Audio API**: Real-time synthesized sci-fi sound effects
+- **HTML5 Canvas**: High-performance interactive particle mesh
 
-## 🎨 Design Features
-
-- **Dark Theme**: Eye-friendly dark background with light text
-- **Color Scheme**:
-  - Primary: `#1a1a2e` (Dark Navy)
-  - Secondary: `#16213e` (Darker Navy)
-  - Accent: `#0f3460` (Deep Blue)
-  - Highlight: `#e94560` (Coral Red)
-
-- **Interactive Elements**:
-  - Hover effects on navigation and buttons
-  - Smooth transitions
-  - Gradient text and backgrounds
-  - Card-based layouts with elevation effects
-
-## 📱 Responsive Design
-
-The portfolio is fully responsive across all devices:
-
-- **Desktop** (1024px+): Full layout with optimized spacing
-- **Tablet** (768px - 1023px): Adjusted grid layouts and padding
-- **Mobile** (480px - 767px): Single column layouts and mobile-friendly spacing
-- **Small Mobile** (below 480px): Compact design optimized for small screens
-
-## 🚀 Getting Started
-
-### Local Development
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/yourusername/portfolio.git
-   cd portfolio
-   ```
-
-2. **Open in browser:**
-   - Simply open `src/index.html` in your web browser
-   - Or use a local server:
-     ```bash
-     python -m http.server 8000
-     # Navigate to http://localhost:8000/src/
-     ```
-
-### File Structure
+## 📁 File Structure
 
 ```
 portfolio/
-├── src/
-│   ├── index.html          # Home page
-│   ├── about.html          # About page
-│   ├── projects.html       # Projects showcase
-│   ├── contact.html        # Contact page
-│   ├── css/
-│   │   ├── style.css       # Main styles
-│   │   └── responsive.css  # Mobile-first responsive styles
-│   ├── js/
-│   │   └── main.js         # JavaScript functionality
-│   └── assets/
-│       └── fonts/          # Custom fonts (if any)
-├── package.json            # Project metadata
-└── README.md              # This file
+├── index.html              # Home page with live simulator
+├── about.html              # Professional background & expertise
+├── projects.html           # 6 featured systems & architecture modals
+├── contact.html            # Transmission contact form
+├── css/
+│   ├── style.css           # Core futuristic stylesheet & animations
+│   └── responsive.css      # Mobile & tablet responsiveness
+├── js/
+│   ├── audio.js            # Web Audio API sound synthesizer
+│   ├── particles.js        # Distributed node mesh canvas
+│   ├── simulator.js        # Event-driven pipeline simulator
+│   ├── terminal.js         # Cyber terminal palette (Cmd+K)
+│   └── main.js             # Core engine: 3D tilt, counters, typewriter, modal
+├── assets/                 # Custom assets and fonts
+├── package.json            # Project metadata and dev scripts
+├── sitemap.xml             # Search engine sitemap
+├── robots.txt              # Crawler directives
+└── README.md              # Project documentation
 ```
 
-## 📦 Deployment
+## 🚀 Local Development
 
-### GitHub Pages
-
-1. **Enable GitHub Pages:**
-   - Go to repository settings
-   - Enable GitHub Pages
-   - Set source to `main` branch and root directory
-
-2. **Access your portfolio:**
-   - Your portfolio will be available at: `https://yourusername.github.io/portfolio/src/`
-
-### Other Hosting Options
-
-- **Netlify**: Drag and drop deployment
-- **Vercel**: Git-based deployments
-- **Firebase Hosting**: Google's hosting platform
-- **AWS S3 + CloudFront**: For production deployments
-
-## 🔧 Customization
-
-### Update Personal Information
-
-1. **Name and Title**: Update in all HTML files (replace "Chiranjib Dash")
-2. **Contact Information**: Update email, LinkedIn, and GitHub URLs in `contact.html`
-3. **Projects**: Add/modify projects in `projects.html`
-4. **Experience Details**: Update content in `about.html`
-
-### Modify Colors
-
-Edit CSS variables in `css/style.css`:
-
-```css
-:root {
-    --primary: #1a1a2e;
-    --secondary: #16213e;
-    --accent: #0f3460;
-    --highlight: #e94560;
-    --text: #eaeaea;
-    --text-light: #b8b8b8;
-    --border: #2a2a3e;
-    --success: #28a745;
-    --warning: #ffc107;
-}
-```
-
-## ✨ Professional Features
-
-### What Makes This Portfolio Stand Out:
-
-1. **Backend Developer Focus**: Showcases Java, Spring Boot, and microservices expertise
-2. **Cloud Architecture**: Highlights AWS skills and distributed systems knowledge
-3. **Performance Metrics**: Displays real achievements (99.9% uptime, 40% MTTR reduction)
-4. **Technical Depth**: Demonstrates understanding of:
-   - Automated Testing & Load Testing
-   - Event-Driven Architecture
-   - Database Optimization
-   - Production Monitoring
-   - DevOps & CI/CD
-
-5. **Freelancing Highlight**: Clearly indicates availability for freelance work
-6. **Experience Summary**: 4+ years demonstrated through concrete examples
-
-## 📊 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## 🤝 Contributing
-
-Feel free to fork and customize this template for your own portfolio!
+1. **Serve locally:**
+   ```bash
+   python3 -m http.server 8000
+   # Open http://localhost:8000 in your browser
+   ```
+   Or using npm:
+   ```bash
+   npm start
+   ```
 
 ## 📄 License
 
-This portfolio template is open source and available under the MIT License.
-
-## 📞 Contact
-
-For any questions or inquiries:
-- Email: your.email@example.com
-- LinkedIn: linkedin.com/in/yourprofile
-- GitHub: github.com/yourusername
-
----
-
-**Last Updated**: April 2026
-
-**Built with**: HTML5, CSS3, Vanilla JavaScript | **No external dependencies**
+MIT License. Designed & Developed by Chiranjib Dash.
