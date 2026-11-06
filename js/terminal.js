@@ -170,51 +170,54 @@ Redirecting to resume in 1 second...
 
             case 'about':
                 this.print(`
-<strong>Chiranjib Dash</strong> - Java Backend Developer & Cloud Architect
-Experience: 4+ Years designing resilient distributed systems.
-Specialization: High-throughput Spring Boot microservices, AWS cloud infrastructure,
-event-driven architectures (SNS/SQS, Kafka), MySQL query tuning, and Datadog APM.
-Availability: Open for Freelancing & Full-Time Senior Backend Roles.
+<strong>Chiranjib Dash</strong> - Software Engineer | Java Backend &amp; Cloud-Native Architect
+Experience: 4+ Years designing and modernizing distributed systems.
+Current Role: Software Engineer @ NetWeb Software (Client: Major Credit Bureau).
+Domain: Credit bureau subscriber management, AWS-KMS encryption, 250M+ users.
+Availability: Open to Full-Time Senior Backend Roles (Remote / Relocation).
                 `);
                 break;
 
             case 'skills':
                 this.print(`
-<strong>TECHNICAL ARSENAL:</strong>
-• <strong>Languages:</strong> Java (8 to 21), TypeScript, SQL, Bash
-• <strong>Frameworks:</strong> Spring Boot, Spring Cloud, RESTful APIs, gRPC, Hibernate
-• <strong>Cloud & Infra:</strong> AWS (EC2, ECS, Lambda, RDS, S3, SQS, SNS), Docker
-• <strong>Databases & Caches:</strong> MySQL, Indexing & Query Tuning, HikariCP, Redis
-• <strong>Testing & Monitoring:</strong> Datadog APM, JUnit, Mockito, JMeter, Gatling
-• <strong>Architecture:</strong> Microservices, Event-Driven, ACID Transactions, SOLID
+<strong>TECHNICAL EXPERTISE:</strong>
+• <strong>Languages:</strong> Java (8, 17, 21), SQL, TypeScript, Bash
+• <strong>Frameworks:</strong> Spring Boot, Spring Security, Spring Cloud, Spring AI, Hibernate/JPA
+• <strong>Cloud &amp; Serverless:</strong> AWS (Lambda, EventBridge, SQS, SNS, KMS, ECS, Aurora), Docker
+• <strong>Databases &amp; Caches:</strong> MySQL, Amazon Aurora, HikariCP, Redis, Query Optimization
+• <strong>Testing &amp; QA:</strong> JUnit 5, Mockito, Apache JMeter, BlueOptima, Automated Regression
+• <strong>Observability &amp; CI/CD:</strong> Datadog APM, Split.io, Harness CI/CD, JFrog, AWS ECR, CodeQL, Veracode
                 `);
                 break;
 
             case 'projects':
                 this.print(`
-<strong>FEATURED PROJECTS:</strong>
-1. <strong>Event-Driven Payment Processing System</strong> [Java 21, Spring Boot, SQS, MySQL]
-   » <a href="projects.html" class="term-link">View Project Details</a>
-2. <strong>Microservices Order Management Platform</strong> [Spring Cloud, ECS, RabbitMQ]
-   » <a href="projects.html" class="term-link">View Project Details</a>
-3. <strong>Real-Time Analytics & Monitoring Dashboard</strong> [Datadog APIs, Grafana]
-   » <a href="projects.html" class="term-link">View Project Details</a>
-4. <strong>TypeScript SDK Library</strong> [NPM, Jest, ESLint, 5k+ monthly DLs]
-   » <a href="projects.html" class="term-link">View Project Details</a>
-5. <strong>Automated Load Testing Framework</strong> [JMeter, Gatling, 100k virtual users]
-   » <a href="projects.html" class="term-link">View Project Details</a>
-6. <strong>Database Optimization & Query Tuning</strong> [MySQL latency cut by 60%]
-   » <a href="projects.html" class="term-link">View Project Details</a>
+<strong>PRODUCTION ARCHITECTURES:</strong>
+1. <strong>Financial Security &amp; AWS-KMS Encryption Platform</strong> [250M+ Users, Spring Security, AWS-KMS]
+   » <a href="projects.html" class="term-link">View Architecture Spec</a>
+2. <strong>Serverless EventBridge &amp; Lambda Notification System</strong> [AWS Lambda, EventBridge, +90% Reliability]
+   » <a href="projects.html" class="term-link">View Architecture Spec</a>
+3. <strong>Java 21 Fleet &amp; High-Concurrency Modernization</strong> [Virtual Threads, Resilience4j, +15% Throughput]
+   » <a href="projects.html" class="term-link">View Architecture Spec</a>
+4. <strong>Zero-Downtime Production Migration Engine</strong> [Multi-threaded Java, 100% SLA Maintained]
+   » <a href="projects.html" class="term-link">View Architecture Spec</a>
+5. <strong>Automated QA &amp; Load Profiling Harness</strong> [Regression 2w ➔ 8h, JUnit 40% ➔ 85%, JMeter]
+   » <a href="projects.html" class="term-link">View Architecture Spec</a>
+6. <strong>Observability &amp; Feature Flagging Architecture</strong> [Datadog APM -30% MTTR, Split.io Canaries]
+   » <a href="projects.html" class="term-link">View Architecture Spec</a>
                 `);
                 break;
 
             case 'experience':
                 this.print(`
-<strong>EXPERIENCE HIGHLIGHTS:</strong>
-• <strong>4+ Years Backend Engineering:</strong> Designed microservices handling millions of daily TX.
-• <strong>AWS Cloud Infrastructure:</strong> Architected zero-downtime multi-region deployments.
-• <strong>Monitoring & APM:</strong> Datadog dashboards reducing MTTR by 40%.
-• <strong>Quality & Performance:</strong> Automated suites with 99.9% uptime track record.
+<strong>CAREER TIMELINE &amp; HIGHLIGHTS:</strong>
+• <strong>NetWeb Software (April 2022 – Present):</strong> Software Engineer
+  - Secured REST APIs handling 250M+ users with Spring Security &amp; AWS-KMS encryption.
+  - Migrated legacy batch notification pipeline to AWS Lambda &amp; EventBridge (+90% reliability).
+  - Modernized microservices fleet from JDK 17 to Java 21 with virtual threads &amp; Resilience4j.
+  - Engineered standalone multi-threaded database migration tool maintaining 100% SLA.
+  - Slashed regression cycle from 2 weeks to 8 hours (JUnit coverage 40% to 85%).
+  - Accelerated development cycles by 40% integrating Spring AI and GenAI workflows.
                 `);
                 break;
 
@@ -230,12 +233,14 @@ Availability: Open for Freelancing & Full-Time Senior Backend Roles.
 
             case 'stats':
                 this.print(`
-<strong>SYSTEM & CAREER TELEMETRY:</strong>
-• Years of Experience: <strong>4+</strong>
-• Daily Transactions Handled: <strong>1,000,000+</strong>
-• Query Latency Reduction: <strong>60%</strong>
-• MTTR Incident Reduction: <strong>40%</strong>
-• High Availability Target: <strong>99.99%</strong>
+<strong>ENGINEERING METRICS &amp; IMPACT:</strong>
+• Production Users Protected: <strong>250,000,000+</strong>
+• Notification Delivery Reliability Gain: <strong>+90%</strong>
+• Regression Cycle Reduction: <strong>2 Weeks ➔ 8 Hours</strong>
+• Automated Code Coverage: <strong>40% ➔ 85%</strong>
+• Microservice Throughput Gain: <strong>+15%</strong>
+• Incident MTTR Reduction: <strong>20% – 30%</strong>
+• Production Availability Target: <strong>99.99%</strong>
                 `);
                 break;
 

@@ -314,206 +314,222 @@ function initScrollCounters() {
    ========================================================================== */
 const PROJECT_SPECS = {
     1: {
-        title: "Event-Driven Payment Processing System",
-        category: "Event-Driven & Microservices",
-        badge: "Java 21 • AWS SQS/SNS • Spring Boot",
+        title: "Financial Security & AWS-KMS Encryption Platform",
+        category: "Security & Financial Systems",
+        badge: "Java 21 • AWS KMS • Spring Security • CodeQL",
         metrics: {
-            tps: "1,200,000+ TX/Day",
-            p99: "< 14ms Latency",
-            uptime: "99.99% Availability",
-            mttr: "2.5 mins Recovery"
+            tps: "250M+ Users",
+            p99: "Zero-Trust Encrypted",
+            uptime: "100% Audit Compliance",
+            mttr: "Zero Security Escapes"
         },
-        overview: "A mission-critical event-driven financial processing engine built with modern Java 21, Spring Boot, and AWS messaging infrastructure. Designed to ingest, validate, and clear payments in real time while guaranteeing exactly-once semantics.",
+        overview: "Enterprise-grade financial API security platform designed for a major credit bureau subscriber ecosystem serving over 250 million users. Leverages Spring Security, OAuth2, and AWS Key Management Service (KMS) for envelope encryption and end-to-end data protection.",
         diagram: `
-  [Payment Ingress] ---> [API Gateway / Auth0]
-                              |
-                              v
-                   [Spring Boot 3.2 Service]
-                              |
-                 +------------+------------+
-                 |                         |
-                 v                         v
-        [AWS SNS Topic]          [Read-Through Cache (Redis)]
-                 |
-        +--------+--------+
-        |                 |
-        v                 v
-  [AWS SQS FIFO]   [Audit Ledger SQS]
-        |                 |
-        v                 v
-  [Worker Cluster]  [Compliance Engine]
-        |
-        v
-  [MySQL Clustered DB (HikariCP Connection Pool)]
-  [Datadog APM & Distributed Trace Agent]
+  [Subscriber REST Clients] ---> [Spring Cloud API Gateway]
+                                          |
+                                          v
+                                [OAuth2 / JWT Validator]
+                                          |
+                                          v
+                              [Spring Boot Microservices]
+                                          |
+                        +-----------------+-----------------+
+                        |                                   |
+                        v                                   v
+             [AWS-KMS Envelope Encryption]        [Resilience4j Circuit]
+             - Customer Master Keys (CMKs)                  |
+             - Automated Data Key Rotation                  v
+                        |                         [Encrypted MySQL / Aurora]
+                        v                                   |
+               [Veracode & CodeQL]                [Audit Trail & Datadog]
+               Static / Dynamic SAST Scanning     Continuous APM & Compliance
         `,
         highlights: [
-            "Handled 1M+ daily transactions with automated dead-letter queue (DLQ) retry policies.",
-            "Zero data loss during peak flash-sale loads with backpressure management.",
-            "Integrated comprehensive Datadog APM metrics for end-to-end distributed tracing."
+            "Enforced AWS-KMS envelope encryption protecting sensitive financial subscriber data across 250M+ users.",
+            "Proactively remediated high-severity security vulnerabilities identified by Veracode SAST and GitHub CodeQL.",
+            "Maintained 100% regulatory audit compliance and zero production data leak incidents."
         ],
         github: "https://github.com/1chiranjibdash"
     },
     2: {
-        title: "Microservices Order Management Platform",
-        category: "Cloud & AWS",
-        badge: "Spring Cloud • AWS ECS • RabbitMQ",
+        title: "Serverless EventBridge & Lambda Notification System",
+        category: "Serverless & Cloud Systems",
+        badge: "AWS Lambda • EventBridge • Amazon SQS • Java 21",
         metrics: {
-            tps: "850,000+ Orders/Day",
-            p99: "< 18ms Latency",
-            uptime: "99.95% Availability",
-            mttr: "< 4 mins"
+            tps: "Millions of Events/Day",
+            p99: "+90% Reliability Gain",
+            uptime: "99.99% Availability",
+            mttr: "Automated DLQ Replay"
         },
-        overview: "A resilient distributed e-commerce order management backbone deployed on containerized AWS ECS clusters. Features automated scaling, circuit breakers, and distributed transaction management.",
+        overview: "Next-generation asynchronous notification and billing dispatch platform replacing an outdated legacy batch job. Re-architected with AWS EventBridge event bus, AWS Lambda serverless execution, and Amazon SQS dead-letter queues.",
         diagram: `
-  [Mobile/Web Client]
-          |
-          v
-  [CloudFront CDN] ---> [AWS ALB (Application Load Balancer)]
-                              |
-                              v
-                   [Spring Cloud Gateway]
-                              |
-        +---------------------+---------------------+
-        |                     |                     |
-        v                     v                     v
-  [Order Service]      [Inventory Service]   [User Profile]
-        |                     |                     |
-        +-----------> [RabbitMQ Cluster] <----------+
-                              |
-                              v
-                   [AWS ECS Worker Tasks]
-                              |
-                      [Aurora MySQL DB]
+  [Subscriber Core Services] ---> [AWS EventBridge Event Bus]
+                                            |
+                      +---------------------+---------------------+
+                      |                                           |
+                      v (Rule: Billing Alerts)                    v (Rule: Security Events)
+              [Amazon SQS FIFO]                           [Amazon SQS Standard]
+                      |                                           |
+                      v                                           v
+            [AWS Lambda (Java 21)]                     [AWS Lambda (Java 21)]
+            - Virtual Threads Concurrency              - Batch Notification Sender
+                      |                                           |
+                      +---------------------+---------------------+
+                                            |
+                                            v
+                                 [Amazon Aurora Database]
+                                 [Dead-Letter Queue (DLQ)]
         `,
         highlights: [
-            "Implemented Resilience4j Circuit Breakers to prevent cascading failures across services.",
-            "Containerized with Docker and orchestrated via AWS ECS Fargate with auto-scaling triggers.",
-            "Eliminated stock race conditions using Redis distributed locks and optimistic locking."
+            "Migrated brittle legacy batch processes to event-driven serverless streams, boosting notification delivery reliability by 90%.",
+            "Engineered automated SQS dead-letter queues (DLQ) with redrive policies ensuring zero message loss during partner downtime.",
+            "Reduced operational cloud overhead and eliminated batch scheduling window bottlenecks entirely."
         ],
         github: "https://github.com/1chiranjibdash"
     },
     3: {
-        title: "Real-Time Analytics & Monitoring Dashboard",
-        category: "Monitoring & Testing",
-        badge: "Datadog APIs • Grafana • Spring Actuator",
+        title: "Java 21 Fleet & High-Concurrency Modernization",
+        category: "High-Concurrency & Architecture",
+        badge: "Java 21 • Virtual Threads • Resilience4j • Spring 3",
         metrics: {
-            tps: "5,000+ Metrics/Sec",
-            p99: "Real-Time Stream",
-            uptime: "100%",
-            mttr: "-40% Incident MTTR"
+            tps: "+15% Throughput Boost",
+            p99: "-10% API Timeouts",
+            uptime: "99.99% High Availability",
+            mttr: "Sub-Second Fallbacks"
         },
-        overview: "An enterprise telemetry observability system integrating Spring Boot Micrometer with Datadog and Grafana to track SLA compliance, memory leaks, connection pool saturation, and error spikes.",
+        overview: "Enterprise-scale fleet modernization transitioning critical subscriber microservices from JDK 17 to Java 21. Implemented virtual threads (Project Loom) for lightweight I/O handling, and Resilience4j circuit breakers to safeguard billing consistency.",
         diagram: `
-  [Microservices Fleet] ---> [Micrometer Agent]
-                                   |
-                                   v
-                         [Datadog APM Daemon]
-                                   |
-                      +------------+------------+
-                      |                         |
-                      v                         v
-           [Synthetic Probes]          [Custom Dashboards]
-                      |                         |
-                      v                         v
-              [PagerDuty Alert]         [Grafana Panels]
+  [Concurrent Client Inbound] ---> [Tomcat Virtual Thread Executor]
+                                                |
+                                                v
+                                  [Virtual Threads (Project Loom)]
+                                                |
+                               +----------------+----------------+
+                               |                                 |
+                               v                                 v
+                     [Resilience4j Breaker]            [Consistent Rollback]
+                     - Half-Open Thresholds            - Billing Transaction Points
+                               |                                 |
+                               +----------------+----------------+
+                                                |
+                                                v
+                                   [Downstream Core Microservices]
+                                   [Datadog APM Thread Telemetry]
         `,
         highlights: [
-            "Reduced Mean Time To Resolution (MTTR) by 40% with predictive latency alarms.",
-            "Custom Grafana dashboards for HikariCP database connection pool health & slow queries.",
-            "Real-time distributed tracing with correlation IDs propagated across HTTP and SQS headers."
+            "Upgraded production microservices fleet from JDK 17 to Java 21, unlocking high-density virtual thread concurrency.",
+            "Integrated Resilience4j circuit breakers and fallback mechanisms, reducing API timeouts by 10% during peak loads.",
+            "Achieved an overall 15% throughput enhancement without increasing cloud infrastructure footprint."
         ],
         github: "https://github.com/1chiranjibdash"
     },
     4: {
-        title: "TypeScript SDK Library",
-        category: "Databases & SDKs",
-        badge: "TypeScript • Jest • NPM Package",
+        title: "Zero-Downtime Production Migration Engine",
+        category: "High-Concurrency & Database",
+        badge: "Java Concurrency • Multi-Threading • MySQL • ACID",
         metrics: {
-            tps: "5,000+ Monthly DLs",
-            p99: "100% Type-Safe",
-            uptime: "Zero Bug Escapes",
-            mttr: "CI/CD Auto-Publish"
+            tps: "100% SLA Maintained",
+            p99: "Zero Data Discrepancy",
+            uptime: "Zero-Downtime Cutover",
+            mttr: "Instant Safe Rollback"
         },
-        overview: "An open-source, strongly-typed client SDK built in TypeScript for backend API consumption. Includes built-in exponential backoff, request deduplication, and full Jest test coverage.",
+        overview: "A mission-critical standalone multi-threaded Java application engineered to execute complex subscriber data migrations across live production databases under continuous user traffic.",
         diagram: `
-  [Client App] ---> [TypeScript SDK Core]
-                            |
-           +----------------+----------------+
-           |                |                |
-           v                v                v
-     [Auth Provider]  [Retry Logic]   [Type Validator]
-           |                |                |
-           +----------------+----------------+
-                            |
-                            v
-                    [REST / gRPC APIs]
+  [Live Production Traffic] ---> [Active Source Database]
+                                           |
+                                [Change Data Capture]
+                                           |
+                                           v
+                       [Migration Engine (Standalone Java App)]
+                       - Thread Pool Coordinator (ExecutorService)
+                       - Chunked Checkpoint Ingestion
+                       - Dual-Write Verification & Hashing
+                                           |
+                         +-----------------+-----------------+
+                         |                                   |
+                         v                                   v
+             [Target Database Cluster]             [Reconciliation Ledger]
+             - Batch Insert / Update               - Automated Rollback Engine
         `,
         highlights: [
-            "Strict TypeScript typings with zero `any` declarations for complete compile-time safety.",
-            "Published on NPM with automated GitHub Actions CI/CD workflows and 98%+ code coverage.",
-            "Lightweight with zero external runtime dependencies."
+            "Engineered multi-threaded worker pools coordinating parallel record migration while maintaining 100% SLA.",
+            "Enforced transactional integrity with chunked checkpointing, verification hashing, and dual-write reconciliations.",
+            "Guaranteed zero service disruption and zero data discrepancies for financial subscriber accounts."
         ],
         github: "https://github.com/1chiranjibdash"
     },
     5: {
-        title: "Automated Load Testing Framework",
-        category: "Monitoring & Testing",
-        badge: "JMeter • Gatling • Java",
+        title: "Automated QA & Load Profiling Harness",
+        category: "Observability & QA",
+        badge: "JUnit 5 • JMeter • BlueOptima • CI/CD Harness",
         metrics: {
-            tps: "100,000 Concurrent",
-            p99: "Stress Simulation",
-            uptime: "Continuous CI",
-            mttr: "Pre-Release Pass"
+            tps: "2w ➔ 8h Test Cycles",
+            p99: "40% ➔ 85% Code Coverage",
+            uptime: "Zero Regression Escapes",
+            mttr: "Automated Quality Gates"
         },
-        overview: "An automated load and stress testing framework simulating realistic production spikes of up to 100,000 concurrent simulated users to uncover memory leaks and connection pool limits.",
+        overview: "An end-to-end testing and performance profiling architecture designed to eliminate regression bottlenecks and identify code hotspots prior to production deployment.",
         diagram: `
-  [Gatling / JMeter Engine] ---> [Distributed Agents Cluster]
-                                            |
-                                            v
-                                 [Target Staging Cluster]
-                                            |
-                                            v
-                                 [Datadog APM Profiling]
-                                            |
-                                            v
-                               [Automated HTML Report]
+  [Code Commit & PR] ---> [Harness CI/CD Pipeline]
+                                  |
+            +---------------------+---------------------+
+            |                                           |
+            v                                           v
+    [JUnit 5 Test Suite]                     [BlueOptima & CodeQL]
+    - Unit & Integration Coverage             - Static Complexity Profiling
+    - Coverage: 40% ➔ 85%                     - Vulnerability Screening
+            |                                           |
+            +---------------------+---------------------+
+                                  |
+                                  v
+                      [Apache JMeter Load Engine]
+                      - High-Volume Stress Benchmarks
+                      - HikariCP Connection Saturation
+                                  |
+                                  v
+                      [Quality Gate: Approved Release]
         `,
         highlights: [
-            "Simulated complex real-world traffic profiles with step-up ramping and soak tests.",
-            "Detected HikariCP pool exhaustion before major release rollouts.",
-            "Integrated into Maven CI pipelines for automated performance regression gates."
+            "Slashed regression testing turnaround from 2 weeks to 8 hours by elevating JUnit test coverage from 40% to 85%.",
+            "Leveraged BlueOptima and Apache JMeter to profile query performance and eradicate thread contention bottlenecks.",
+            "Established automated pipeline quality gates in Harness CI/CD to prevent buggy builds from entering staging."
         ],
         github: "https://github.com/1chiranjibdash"
     },
     6: {
-        title: "Database Optimization & Query Tuning",
-        category: "Databases & SDKs",
-        badge: "MySQL 8.0 • HikariCP • Indexing",
+        title: "Observability & Feature Flagging Architecture",
+        category: "Observability & Cloud Systems",
+        badge: "Datadog APM • Split.io • AWS ECR • JFrog",
         metrics: {
-            tps: "200% Throughput Boost",
-            p99: "60% Latency Drop",
-            uptime: "Zero Downtime",
-            mttr: "Stable Connection Pool"
+            tps: "-20% to -30% MTTR",
+            p99: "Targeted Canaries",
+            uptime: "99.99% Availability",
+            mttr: "Instant Kill-Switch"
         },
-        overview: "A comprehensive database re-engineering initiative optimizing relational schema, compound indexing, query execution plans, and connection pool sizing to unlock maximum backend throughput.",
+        overview: "Enterprise observability and feature governance framework pairing Datadog APM distributed tracing with Split.io feature flagging and immutable container pipelines.",
         diagram: `
-  [Application Threads] ---> [HikariCP Connection Pool (Optimized)]
-                                            |
-                                            v
-                                 [MySQL 8.0 Query Engine]
-                                            |
-                                  [EXPLAIN Plan Analyzer]
-                                            |
-                             +--------------+--------------+
-                             |                             |
-                             v                             v
-                   [B-Tree Composite Indexes]    [Partitioned Tables]
+  [Production Traffic] ---> [Split.io Feature Router]
+                                    |
+                +-------------------+-------------------+
+                |                                       |
+                v (Canary Cohort)                       v (Baseline Fleet)
+        [Feature Variant A]                     [Feature Variant B]
+                |                                       |
+                +-------------------+-------------------+
+                                    |
+                                    v
+                         [Datadog APM Agent]
+                         - Distributed Trace Spans
+                         - Real-Time Error Rates & Alerts
+                                    |
+                                    v
+                     [Harness CI/CD & AWS ECR]
+                     [JFrog Artifactory Release Pipeline]
         `,
         highlights: [
-            "Cut slow query execution times by 60% through covering indexes and eliminating filesorts.",
-            "Fine-tuned HikariCP pool parameters (maximumPoolSize, idleTimeout) preventing thread lockups.",
-            "Achieved a 200% throughput gain under high concurrent write loads without adding hardware."
+            "Designed bespoke Datadog APM telemetry dashboards and synthetic monitors, decreasing MTTR by 20%–30%.",
+            "Integrated Split.io feature flags to execute canary rollouts and A/B tests safely, driving subscriber retention.",
+            "Managed binary governance using JFrog Artifactory and AWS ECR in automated Harness deployment pipelines."
         ],
         github: "https://github.com/1chiranjibdash"
     }
@@ -665,7 +681,7 @@ function initContactForm() {
         const submitBtn = form.querySelector('button[type="submit"]');
         if (submitBtn) {
             submitBtn.disabled = true;
-            submitBtn.innerHTML = '<span class="cyber-spinner"></span> ENCRYPTING & TRANSMITTING PACKET...';
+            submitBtn.innerHTML = '<span class="cyber-spinner"></span> SENDING MESSAGE...';
         }
         if (window.cyberAudio) window.cyberAudio.playPowerOn();
     });

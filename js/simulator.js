@@ -1,5 +1,5 @@
 // Interactive Event-Driven Architecture Simulator
-// Showcases real-time Java Spring Boot + AWS SQS/SNS + Microservices event streaming
+// Showcases real-time Java 21 + AWS EventBridge + AWS-KMS + Datadog APM pipeline
 
 class EventPipelineSimulator {
     constructor(containerId = 'event-simulator') {
@@ -24,12 +24,12 @@ class EventPipelineSimulator {
                 <div class="sim-header">
                     <div class="sim-title">
                         <span class="sim-pulse"></span>
-                        <span class="sim-label">LIVE EVENT-DRIVEN PIPELINE SIMULATOR</span>
-                        <span class="sim-spec">Spring Boot 3.2 • AWS SQS • Datadog APM</span>
+                        <span class="sim-label">LIVE FINANCIAL EVENT PIPELINE SIMULATOR</span>
+                        <span class="sim-spec">Java 21 • AWS EventBridge • AWS-KMS • Datadog APM</span>
                     </div>
                     <div class="sim-controls">
                         <button id="sim-dispatch-btn" class="btn-cyber-sm">
-                            <span class="btn-icon">⚡</span> Dispatch Transaction
+                            <span class="btn-icon">⚡</span> Dispatch Event
                         </button>
                         <button id="sim-stream-btn" class="btn-cyber-sm outline">
                             <span class="btn-icon">▶</span> Auto Stream: <span id="sim-stream-status">OFF</span>
@@ -40,43 +40,43 @@ class EventPipelineSimulator {
                 <div class="pipeline-track">
                     <div class="pipe-node" data-step="1" id="pnode-1">
                         <div class="node-icon">🌐</div>
-                        <div class="node-title">Client Req</div>
-                        <div class="node-sub">POST /payments</div>
+                        <div class="node-title">REST Client</div>
+                        <div class="node-sub">POST /subscribers</div>
                     </div>
                     <div class="pipe-connector"><div class="connector-line"></div></div>
 
                     <div class="pipe-node" data-step="2" id="pnode-2">
                         <div class="node-icon">🛡️</div>
-                        <div class="node-title">API Gateway</div>
-                        <div class="node-sub">JWT & RateLimit</div>
+                        <div class="node-title">AWS KMS &amp; GW</div>
+                        <div class="node-sub">Envelope Encrypt</div>
                     </div>
                     <div class="pipe-connector"><div class="connector-line"></div></div>
 
                     <div class="pipe-node" data-step="3" id="pnode-3">
                         <div class="node-icon">☕</div>
-                        <div class="node-title">Spring Boot</div>
-                        <div class="node-sub">Core Service</div>
+                        <div class="node-title">Java 21 Fleet</div>
+                        <div class="node-sub">Virtual Threads</div>
                     </div>
                     <div class="pipe-connector"><div class="connector-line"></div></div>
 
                     <div class="pipe-node" data-step="4" id="pnode-4">
                         <div class="node-icon">📨</div>
-                        <div class="node-title">AWS SQS</div>
-                        <div class="node-sub">Event Broker</div>
+                        <div class="node-title">EventBridge</div>
+                        <div class="node-sub">Serverless Bus</div>
                     </div>
                     <div class="pipe-connector"><div class="connector-line"></div></div>
 
                     <div class="pipe-node" data-step="5" id="pnode-5">
                         <div class="node-icon">⚙️</div>
-                        <div class="node-title">Worker</div>
-                        <div class="node-sub">Order Engine</div>
+                        <div class="node-title">AWS Lambda</div>
+                        <div class="node-sub">Async Worker</div>
                     </div>
                     <div class="pipe-connector"><div class="connector-line"></div></div>
 
                     <div class="pipe-node" data-step="6" id="pnode-6">
                         <div class="node-icon">📊</div>
-                        <div class="node-title">MySQL & APM</div>
-                        <div class="node-sub">Datadog 100%</div>
+                        <div class="node-title">Aurora &amp; APM</div>
+                        <div class="node-sub">Datadog Tracing</div>
                     </div>
                 </div>
 
@@ -84,7 +84,7 @@ class EventPipelineSimulator {
                     <div class="sim-metrics">
                         <div class="metric-cell">
                             <span class="m-val" id="sim-metric-tx">1,420,890</span>
-                            <span class="m-lbl">TRANSACTIONS PROCESSED</span>
+                            <span class="m-lbl">EVENTS PROCESSED</span>
                         </div>
                         <div class="metric-cell">
                             <span class="m-val" id="sim-metric-lat">11.4ms</span>
@@ -106,7 +106,7 @@ class EventPipelineSimulator {
                             <span class="term-title">distributed-trace-log.stdout</span>
                         </div>
                         <div class="sim-log-feed" id="sim-log-feed">
-                            <div class="log-line info">[SYSTEM] Microservices cluster initialized on AWS ECS. Ready for transactions.</div>
+                            <div class="log-line info">[SYSTEM] Credit Bureau subscriber microservices active on AWS. EventBridge ready.</div>
                         </div>
                     </div>
                 </div>
@@ -149,16 +149,16 @@ class EventPipelineSimulator {
         const txMetric = document.getElementById('sim-metric-tx');
         if (txMetric) txMetric.textContent = this.txCount.toLocaleString();
 
-        const latency = (8 + Math.random() * 6).toFixed(1);
+        const latency = (8 + Math.random() * 5).toFixed(1);
         const latMetric = document.getElementById('sim-metric-lat');
         if (latMetric) latMetric.textContent = `${latency}ms`;
 
         const traceId = 'tr_' + Math.random().toString(36).substring(2, 10);
-        const amount = (Math.random() * 450 + 25).toFixed(2);
+        const subId = 'SUB-' + Math.floor(100000 + Math.random() * 900000);
 
-        this.addLog(`[${this.getTimestamp()}] [INFO] Received POST /payments (trace_id=${traceId}, amt=$${amount})`, 'info');
+        this.addLog(`[${this.getTimestamp()}] [INFO] Received POST /subscribers/notify (trace_id=${traceId}, sub_id=${subId})`, 'info');
 
-        const nodes = [1, 2, 3, 4, 5, 6].map(i => document.getElementById(`pnode-1` ? `pnode-${i}` : null));
+        const nodes = [1, 2, 3, 4, 5, 6].map(i => document.getElementById(`pnode-${i}`));
 
         // Sequence pipeline lights
         nodes.forEach((node, idx) => {
@@ -168,15 +168,15 @@ class EventPipelineSimulator {
                 if (window.cyberAudio) window.cyberAudio.playPacket();
 
                 if (idx === 1) {
-                    this.addLog(`[${this.getTimestamp()}] [GATEWAY] JWT signature validated in 1.2ms. Allowed through rate-limiter.`, 'detail');
+                    this.addLog(`[${this.getTimestamp()}] [AWS-KMS] Envelope encryption active. Key CMK verified. OAuth2 token authorized.`, 'detail');
                 } else if (idx === 2) {
-                    this.addLog(`[${this.getTimestamp()}] [SPRING] Core payment validated. Emitted event to AWS SQS payment-events queue.`, 'detail');
+                    this.addLog(`[${this.getTimestamp()}] [JAVA 21] Virtual thread dispatched payload. Resilience4j breaker state: CLOSED.`, 'detail');
                 } else if (idx === 3) {
-                    this.addLog(`[${this.getTimestamp()}] [SQS] Message persisted in FIFO queue. MessageId: msg-${Math.random().toString(36).substring(2, 8)}.`, 'detail');
+                    this.addLog(`[${this.getTimestamp()}] [EVENTBRIDGE] Event routed to subscriber rule bus. Persisted to SQS DLQ failover.`, 'detail');
                 } else if (idx === 4) {
-                    this.addLog(`[${this.getTimestamp()}] [WORKER] Event consumed by worker cluster. Updating ledger & inventory.`, 'detail');
+                    this.addLog(`[${this.getTimestamp()}] [LAMBDA] Serverless worker invoked in 3.8ms. Notification payload processed.`, 'detail');
                 } else if (idx === 5) {
-                    this.addLog(`[${this.getTimestamp()}] [SUCCESS] MySQL transaction committed (HikariCP pool=active). Datadog APM trace reported.`, 'success');
+                    this.addLog(`[${this.getTimestamp()}] [DATADOG APM] Aurora commit verified. Trace span flushed to Datadog. P99=${latency}ms.`, 'success');
                     if (window.cyberAudio) window.cyberAudio.playSuccess();
                 }
 
